@@ -39,3 +39,4 @@ ENV/
 # Local configuration
 .DS_Store
 Thumbs.db 
+.oneliner

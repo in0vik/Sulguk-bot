@@ -45,37 +45,6 @@ A simple Telegram bot that uses the [Sulguk](https://github.com/tishka17/sulguk)
    ```
    python main.py
    ```
-
-### Deployment to Google Cloud Run
-
-1. Install the [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
-
-2. Authenticate with Google Cloud:
-
-   ```
-   gcloud auth login
-   ```
-
-3. Create a new project or select an existing one:
-
-   ```
-   gcloud projects create [PROJECT_ID]
-   gcloud config set project [PROJECT_ID]
-   ```
-
-4. Enable the necessary APIs:
-
-   ```
-   gcloud services enable cloudbuild.googleapis.com run.googleapis.com
-   ```
-
-5. Build and deploy the container:
-
-   ```
-   gcloud builds submit --tag gcr.io/[PROJECT_ID]/tg-html-bot
-   ```
-
-6. Deploy to Cloud Run:
    ```
    gcloud run deploy tg-html-bot \
      --image gcr.io/[PROJECT_ID]/tg-html-bot \
